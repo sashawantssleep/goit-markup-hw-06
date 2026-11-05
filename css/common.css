@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -28,13 +36,13 @@ img {
 }
 .container {
   width: 100%;
-  max-width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -56,4 +64,20 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   margin: -1px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .section {
+    padding: 120px 0;
+  }
 }

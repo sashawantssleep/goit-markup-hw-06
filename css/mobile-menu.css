@@ -1,0 +1,125 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: #fff;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  color: #2e2f42;
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  color: #fff;
+  background-color: #404bbf;
+  border-color: transparent;
+}
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+.mobile-menu-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-link.current,
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: #404bbf;
+}
+.mobile-menu-address {
+  margin-top: auto;
+  margin-bottom: 48px;
+  font-style: normal;
+}
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mobile-menu-phone,
+.mobile-menu-email {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-phone {
+  color: #4d5ae5;
+}
+.mobile-menu-phone:hover,
+.mobile-menu-phone:focus,
+.mobile-menu-email:hover,
+.mobile-menu-email:focus {
+  color: #404bbf;
+}
+.mobile-menu-social-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.mobile-menu-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-social-link svg {
+  --color1: transparent;
+}
+.mobile-menu-social-link:hover,
+.mobile-menu-social-link:focus {
+  background-color: #404bbf;
+}
+@media (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu.is-open {
+    display: none;
+  }
+}
