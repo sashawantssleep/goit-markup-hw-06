@@ -1,3 +1,6 @@
+.feature-icon-wrapper {
+  display: none;
+}
 .features-list {
   display: flex;
   flex-direction: column;
@@ -36,6 +39,17 @@
   }
 }
 @media (min-width: 1158px) {
+  .feature-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+  }
+
   .features-list {
     gap: 24px;
   }
